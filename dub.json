@@ -1,0 +1,5 @@
+{
+    "name": "miniz",
+    "description": "Miniz is a library in a single source file that implements the zlib and Deflate compressed data format specification standards.",
+    "license": "MIT",
+}
