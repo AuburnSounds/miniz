@@ -7,4 +7,5 @@ Miniz is a lossless, high performance data compression library in a single sourc
 
 ## Changes
 
+- Not all functions were ported. Basically the DEFLATE codec is there but no `.zip` support.
 - Was a bit modified to decode Apple's PNG like in stbz from `stb_image.h`.
