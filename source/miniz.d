@@ -117,10 +117,24 @@ module miniz;
      uses the 64-bit variants: fopen64(), stat64(), etc. Otherwise you won't be able to process large files
      (i.e. 32-bit stat() fails for me on files > 0x7FFFFFFF bytes).
 */
+version(Have_nurt) {
+    import numem.core.hooks : 
+        nu_malloc, nu_realloc, nu_free, 
+        nu_memcpy, nu_memset;
+    import core.internal.exception : onOutOfMemoryError;
 
-import core.stdc.stdlib: malloc, free, realloc;
-import core.stdc.string: memset, memcpy;
-import core.stdc.config: c_long, c_ulong;
+    alias malloc = nu_malloc;
+    alias realloc = nu_realloc;
+    alias free = nu_free;
+    alias memcpy = nu_memcpy;
+    alias memset = nu_memset;
+    alias c_long = int;
+    alias c_ulong = uint;
+} else {
+    import core.stdc.stdlib: malloc, free, realloc;
+    import core.stdc.string: memset, memcpy;
+    import core.stdc.config: c_long, c_ulong;
+}
 
 nothrow @nogc:
 

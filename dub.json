@@ -2,4 +2,16 @@
     "name": "miniz",
     "description": "Miniz is a library in a single source file that implements the zlib and Deflate compressed data format specification standards.",
     "license": "MIT",
+    "dependencies": {
+        "nulib:stdc": {
+            "version": ">=0.2.0",
+            "optional": true,
+            "default": false
+        },
+        "nurt": {
+            "version": ">=0.1.4",
+            "optional": true,
+            "default": false
+        }
+    }
 }
