@@ -4,12 +4,12 @@
     "license": "MIT",
     "dependencies": {
         "nulib:stdc": {
-            "version": ">=0.2.0",
+            "version": ">=0.3.0",
             "optional": true,
             "default": false
         },
         "nurt": {
-            "version": ">=0.1.4",
+            "version": ">=0.2.1",
             "optional": true,
             "default": false
         }
